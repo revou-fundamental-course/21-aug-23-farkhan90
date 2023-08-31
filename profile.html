@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website | Profile</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- My Style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">
+      <img src="img/logo.png" alt="logo" />
+    </a>
+
+    <div>
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="#home">Profile</a>
+        <a href="#menu">Facilitation</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+
+  <!-- Hero Section start -->
+  <section class="hero" id="home">
+    <div class="mask-container">
+      <main class="content">
+        <h1>Hi <span id="banner-name">Kopi</span>, Welcome to Website</h1>
+        <p>Ini adalah website latihan pertama</p>
+      </main>
+    </div>
+  </section>
+  <!-- Hero Section end -->
+
+  <!-- About Section start -->
+  <section id="about" class="about">
+    <h2><span>About</span> Us</h2>
+
+    <div class="row">
+      <div class="about-img">
+        <img src="img/header-bg.jpg" alt="Tentang Kami">
+      </div>
+      <div class="content">
+        <h3>My School</h3>
+        <p>Welcome to our our website, your gateway to mastering the digital skills of today and tomorrow. Our platform
+          was born out of the belief that in this fast-paced digital age, acquiring and honing digital skills is not
+          just an option, but a necessity. At our platform, we're passionate about empowering individuals from all walks
+          of life to thrive in the digital landscape. Whether you're looking to jumpstart a new career, enhance your
+          current skill set, or simply stay ahead of the technological curve, we've got you covered.</p>
+      </div>
+    </div>
+  </section>
+  <!-- About Section end -->
+
+  <!-- Visi Misi Section start -->
+  <section id="contact" class="contact">
+    <h2><span>Vission</span> And <span>Mission</span></h2>
+
+    <div class="row">
+      <form name="form-message">
+        <div class="input-group">
+          <label>Vission</label>
+          <label>At our platform, our vision is to democratize digital education and empower individuals worldwide to
+            thrive in the digital age. We aspire to be the premier online learning platform where anyone, regardless of
+            their background or location, can access high-quality digital skill courses that propel them towards
+            success.</label>
+        </div>
+      </form>
+      <form name="form-message">
+        <div class="input-group">
+          <label>Mission</label>
+          <label>Our mission is to bridge the digital skills gap by offering a comprehensive range of courses that cater
+            to the evolving needs of the digital landscape. We are committed to providing accessible, affordable, and
+            engaging learning experiences that equip learners with the practical skills and knowledge they need to excel
+            in their careers and pursue their passions.</label>
+          <label>Through our unwavering commitment to our vision and mission, our platform is dedicated to playing a
+            pivotal role in shaping the digital leaders of tomorrow and contributing to a more digitally literate world.
+            Join us on this transformative learning journey and be part of the digital revolution.</label>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Visi Misi Section end -->
+
+  <!-- Contact Section start -->
+  <section id="contact" class="contact">
+    <h2><span>Message</span> Us</h2>
+
+    <div class="row">
+      <form name="form-message">
+        <div class="input-group">
+          <label for="nama">Nama</label>
+          <input class="input-full" type="text" id="nama" name="nama" placeholder="Nama" required />
+        </div>
+        <div class="input-group">
+          <label for="tgl_lahir">Tanggal Lahir</label>
+          <input class="input-full" type="date" id="tgl_lahir" name="tgl_lahir" required />
+        </div>
+        <div class="input-group">
+          <label for="jenis_kelamin">Jenis Kelamin</label>
+          <div class="input-radio">
+            <div class="form-check">
+              <input class="radioCek" type="radio" name="jk" id="L" value="Laki-laki" />
+              <label class="label-radio" for="L"> Laki-laki </label>
+            </div>
+            <div class="form-check">
+              <input class="radioCek" type="radio" name="jk" id="P" value="Perempuan" />
+              <label class="label-radio" for="P"> Perempuan </label>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="pesan">Pesan</label>
+          <textarea class="input-full" type="text" id="pesan" name="pesan" placeholder="Pesan" required></textarea>
+        </div>
+        <button type="button" class="btn" onclick="return validationForm()">Submit</button>
+      </form>
+
+      <div class="output-form">
+        <div class="output-grup">
+          <h3 class="label-output">Nama: </h3>
+          <h3 id="output-nama"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Tanggal Lahir: </h3>
+          <h3 id="output-tgl_lahir"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Jenis Kelamin: </h3>
+          <h3 id="output-jenis_kelamin"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Pesan: </h3>
+          <h3 id="output-pesan"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Current: </h3>
+          <h3 id="current"></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section end -->
+
+  <!-- Footer start -->
+  <footer>
+    <div class="credit">
+      <p>Created by <a href="">Farkhan</a>. | &copy; 2023.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+
+  <!-- My Javascript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

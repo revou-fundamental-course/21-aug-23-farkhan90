@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website | Home</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- My Style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">
+      <img src="img/logo.png" alt="logo" />
+    </a>
+
+    <div>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="#menu">Facilitation</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+
+  <!-- Hero Section start -->
+  <section class="hero" id="home">
+    <div class="mask-container">
+      <main class="content">
+        <h1>Hi <span id="banner-name">Kopi</span>, Welcome to Website</h1>
+        <p>Ini adalah website latihan pertama</p>
+      </main>
+    </div>
+  </section>
+  <!-- Hero Section end -->
+
+  <!-- Menu Section start -->
+  <section id="menu" class="menu">
+    <h2><span>Our</span> Facilitation</h2>
+
+    <div class="row">
+      <div class="menu-card">
+        <img src="img/kihajar.jpg" alt="kihajar" class="menu-card-img" />
+        <h3 class="menu-card-title">- Profesional Teacher -</h3>
+      </div>
+      <div class="menu-card">
+        <img src="img/kelas.jpg" alt="kelas" class="menu-card-img" />
+        <h3 class="menu-card-title">- Class -</h3>
+      </div>
+      <div class="menu-card">
+        <img src="img/labkom.jpg" alt="labkom" class="menu-card-img" />
+        <h3 class="menu-card-title">- Laboratorium -</h3>
+      </div>
+      <div class="menu-card">
+        <img src="img/lap.jpeg" alt="lap" class="menu-card-img" />
+        <h3 class="menu-card-title">- Football Field -</h3>
+      </div>
+    </div>
+  </section>
+  <!-- Menu Section end -->
+
+  <!-- Contact Section start -->
+  <section id="contact" class="contact">
+    <h2><span>Message</span> Us</h2>
+
+    <div class="row">
+      <form name="form-message">
+        <div class="input-group">
+          <label for="nama">Nama</label>
+          <input class="input-full" type="text" id="nama" name="nama" placeholder="Nama" required />
+        </div>
+        <div class="input-group">
+          <label for="tgl_lahir">Tanggal Lahir</label>
+          <input class="input-full" type="date" id="tgl_lahir" name="tgl_lahir" required />
+        </div>
+        <div class="input-group">
+          <label for="jenis_kelamin">Jenis Kelamin</label>
+          <div class="input-radio">
+            <div class="form-check">
+              <input class="radioCek" type="radio" name="jk" id="L" value="Laki-laki" />
+              <label class="label-radio" for="L"> Laki-laki </label>
+            </div>
+            <div class="form-check">
+              <input class="radioCek" type="radio" name="jk" id="P" value="Perempuan" />
+              <label class="label-radio" for="P"> Perempuan </label>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="pesan">Pesan</label>
+          <textarea class="input-full" type="text" id="pesan" name="pesan" placeholder="Pesan" required></textarea>
+        </div>
+        <button type="button" class="btn" onclick="return validationForm()">Submit</button>
+      </form>
+
+      <div class="output-form">
+        <div class="output-grup">
+          <h3 class="label-output">Nama: </h3>
+          <h3 id="output-nama"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Tanggal Lahir: </h3>
+          <h3 id="output-tgl_lahir"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Jenis Kelamin: </h3>
+          <h3 id="output-jenis_kelamin"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Pesan: </h3>
+          <h3 id="output-pesan"></h3>
+        </div>
+        <div class="output-grup">
+          <h3 class="label-output">Current: </h3>
+          <h3 id="current"></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section end -->
+
+  <!-- Footer start -->
+  <footer>
+    <div class="credit">
+      <p>Created by <a href="">Farkhan</a>. | &copy; 2023.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+
+  <!-- My Javascript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
